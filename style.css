@@ -21,6 +21,55 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+/* Header */
+navbar .navbar-nav {
+	flex-wrap: wrap !important;
+}
+
+navbar .ads {
+	height: 60px;
+	width: 70%;
+	margin: 0 auto;
+	background-color: #aaa;
+}
+
+navbar nav .nav-link {
+	color: #FFF !important;
+	font-family: serif;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: 18px;
+	margin: 0 15px;
+}
+
+navbar nav .nav-link:hover {
+	color: #CA252B !important;
+}
+
+navbar nav form {
+	position: relative;
+}
+
+navbar nav form label {
+	margin-bottom: 0 !important;
+}
+
+navbar nav form label input {
+	padding-right: 40px !important;
+	border: none;
+	padding: 7px 12px;
+	outline: none;
+}
+
+navbar nav form button {
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	color: #CA252B;
+	border: none;
+	background-color: transparent;
+}
+
 .main-posts .post-img {
 	overflow: hidden;
 	width: 100%;
@@ -54,7 +103,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .main-posts .ads {
-	height: 300px;
+	height: 400px;
 	width: 100%;
 }
 
@@ -64,6 +113,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .egypt-news .slick-dots li {
 	background-color: #000;
+	width: 15px;
+	height: 15px;
 	border-radius: 50%;
 }
 
@@ -71,16 +122,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-color: #CA252B;
 }
 
-.features h2 {
-	padding: 20px;
-}
-
 .features .post-img {
 	height: 300px;
 }
 
 .features .top-stories ul {
-	border-left: 1px solid #aaa;
+	border-left: 1px solid #000;
 	border-top: 1px solid #aaa;
 }
 
@@ -115,69 +162,20 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		grid-row: 1 / 7;
 		grid-column: 1 / 10;
 	}
-
 	.main-posts .grid .main-post-item:nth-of-type(2) {
 		grid-row: 7 / 10;
 		grid-column: 1 / 6;
 	}
-
 	.main-posts .grid .main-post-item:nth-of-type(3) {
 		grid-row: 7 / 10;
 		grid-column: 6 / 10;
 	}
-
-	.post-title h4 {
+	.main-posts .post-title h4 {
+		font-family: sans-serif;
+		font-weight: 600;
 		font-size: 16px;
+		line-height: 1;
 	}
-}
-
-/* Header */
-navbar .navbar-nav {
-	flex-wrap: wrap !important;
-}
-
-navbar .ads {
-	height: 60px;
-	width: 70%;
-	margin: 0 auto;
-	background-color: #aaa;
-}
-
-navbar nav .nav-link {
-	color: #FFF !important;
-	font-family: serif;
-	font-weight: 600;
-	letter-spacing: 1px;
-	font-size: 18px;
-	margin: 0 8px;
-}
-
-navbar nav .nav-link:hover {
-	color: #CA252B !important;
-}
-
-navbar nav form {
-	position: relative;
-}
-
-navbar nav form label {
-	margin-bottom: 0 !important;
-}
-
-navbar nav form label input {
-	padding-right: 40px !important;
-	border: none;
-	padding: 7px 12px;
-	outline: none;
-}
-
-navbar nav form button {
-	position: absolute;
-	top: 7px;
-	right: 10px;
-	color: #CA252B;
-	border: none;
-	background-color: transparent;
 }
 
 /* Main Style */
@@ -190,45 +188,30 @@ html {
 .head {
 	color: #CA252B;
 	padding: 15px 0;
-	border-top: 3px solid #000;
+	border-top: 4px solid #000;
 	font-family: serif;
 	font-weight: 600;
+	font-size: 32px;
+	line-height: 1;
 	text-transform: uppercase;
-}
-
-.post-title a[href="http://localhost/task/category/local/"] {
-	background-color: #CA252B;
-	color: #FFF;
-	padding: 5px 15px;
-	border-radius: 5px;
-}
-
-.post-title a[href="http://localhost/task/category/local/"]:hover {
-	color: #CA252B;
-	background-color: #FFF;
-}
-
-.post-title a[href="http://localhost/task/category/world/"] {
-	background-color: #00f;
-	color: #FFF;
-	padding: 5px 15px;
-	border-radius: 5px;
-}
-
-.post-title a[href="http://localhost/task/category/world/"]:hover {
-	color: #00f;
-	background-color: #FFF;
-}
-
-img {
-	height: 100%;
-	width: 100%;
 }
 
 .post-title {
 	position: absolute;
 	bottom: 0;
-	left: 20px;
+	left: 0;
+	width: 100%;
+	text-shadow: 0 0 45px #000;
+	background-color: transparent;
+	background-image: linear-gradient(#00000005, #000);
+	padding: 5px 5px 5px 20px;
+}
+
+.post-title h4 {
+	font-family: sans-serif;
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 1;
 }
 
 .post-title a {
@@ -238,6 +221,43 @@ img {
 .post-title a:hover {
 	color: #DDD !important;
 	text-decoration: none !important;
+}
+
+.post-title a[href="http://abanoub-task-code95.c1.biz/category/local/"] {
+	background-color: #CA252B;
+	color: #FFF;
+	padding: 3px 12px;
+	font-family: serif;
+	font-weight: 500;
+	font-size: 22px;
+}
+
+.post-title a[href="http://abanoub-task-code95.c1.biz/category/local/"]:hover {
+	color: #CA252B !important;
+	background-color: #FFF !important;
+}
+
+.post-title a[href="http://abanoub-task-code95.c1.biz/category/world/"] {
+	background-color: #1157f5;
+	color: #FFF;
+	padding: 3px 12px;
+	font-family: serif;
+	font-weight: 500;
+	font-size: 22px;
+}
+
+.post-title a[href="http://abanoub-task-code95.c1.biz/category/world/"]:hover {
+	color: #00f !important;
+	background-color: #FFF !important;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+}
+
+.slick-initialized .slick-slide {
+	margin: 0 3px !important;
 }
 
 /*# sourceMappingURL=style.css.map */

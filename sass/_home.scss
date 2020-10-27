@@ -35,7 +35,7 @@ $mainColor: #CA252B;
     }
 
     .ads {
-        height: 300px;
+        height: 400px;
         width: 100%;
     }
 }
@@ -49,6 +49,9 @@ $mainColor: #CA252B;
     .slick-dots {
         li {
             background-color: #000;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
         }
 
         li.slick-active {
@@ -59,19 +62,13 @@ $mainColor: #CA252B;
 }
 
 .features {
-
-    h2 {
-        padding: 20px;
-    }
-
     .post-img {
         height: 300px;
     }
 
     .top-stories {
-
         ul {
-            border-left: 1px solid #aaa;
+            border-left: 1px solid #000;
             border-top: 1px solid #aaa;
 
             li {

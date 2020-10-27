@@ -14,7 +14,7 @@
 get_header(); 
 ?>
 
-<section class="main-posts py-3">
+<section class="main-posts py-4">
     <?php 
         $args = array(
             'post_type' => 'post',
@@ -29,10 +29,10 @@ get_header();
             <div class="col-md-8 px-0">
                 <div class="grid">
                         <?php if ( $arr_posts->have_posts() ) :
-                        $posts_count = 0;
+                        //$posts_count = 0;
                         while ( $arr_posts->have_posts()) : $arr_posts->the_post(); 
                         $main_post = get_field('main_posts');
-                        $posts_count++;
+                        //$posts_count++;
                         if ($main_post) :?>
                         <div class="main-post-item">
                             <div class="post-img">
@@ -53,7 +53,7 @@ get_header();
     </div>
 </section>
 
-<section class="egypt-news">
+<section class="egypt-news mt-3">
     <div class="container-fluid">
         <h2 class="head">Egypt News</h2>
         <div class="slider">
@@ -68,8 +68,7 @@ get_header();
             
             if ( $arr_posts->have_posts() ) :
             
-                while ( $arr_posts->have_posts() ) :
-                    $arr_posts->the_post();
+                while ( $arr_posts->have_posts() ) : $arr_posts->the_post();
                     ?>
                     <div class="position-relative" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                         <div class="post-img">
@@ -120,10 +119,16 @@ get_header();
                     <h2 class="head">Top 5 Stories</h2>
                     <ul class='list-unstyled'>
                     <?php
-                    $count=1;
-                        query_posts('meta_key=post_views_count&posts_per_page=5&orderby=meta_value_num&
-                        order=DESC');
-                        if (have_posts()) : while (have_posts()) : the_post();
+                        $args = array(
+                            'meta_key' => 'post_views_count',
+                            'posts_per_page' => '5',
+                            'orderby' => 'meta_value_num',
+                            'order' => 'DESC',
+                        );
+                        $arr_posts = new WP_Query( $args );
+
+                        $count=1;
+                        if ($arr_posts->have_posts()) : while ($arr_posts->have_posts()) : $arr_posts->the_post();
                     ?>
                     <li><span><?php echo $count++ ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
                     <?php

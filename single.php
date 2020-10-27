@@ -7,6 +7,7 @@
  * @package Code95_Task
  */
 
+setPostViews(get_the_ID());
 get_header();
 ?>
 
