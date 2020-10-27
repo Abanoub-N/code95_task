@@ -1,0 +1,104 @@
+$mainColor: #CA252B;
+
+.main-posts {
+
+    .post-img {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    .grid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-rows: repeat(9, 45px);
+        grid-template-columns: repeat(10, 10%);
+
+        .main-post-item {
+            position: relative;
+
+            &:first-child {
+                grid-row: 1 / 10;
+                grid-column: 1 / 7;
+            }
+
+            &:nth-of-type(2) {
+                grid-row: 1 / 5;
+                grid-column: 7 / 10;
+            }
+
+            &:nth-of-type(3) {
+                grid-row: 5 / 10;
+                grid-column: 7 / 10;
+            }
+        }
+    }
+
+    .ads {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+.egypt-news {
+
+    .post-img {
+        height: 300px;
+    }
+
+    .slick-dots {
+        li {
+            background-color: #000;
+        }
+
+        li.slick-active {
+            background-color: $mainColor;
+        }
+
+    }
+}
+
+.features {
+
+    h2 {
+        padding: 20px;
+    }
+
+    .post-img {
+        height: 300px;
+    }
+
+    .top-stories {
+
+        ul {
+            border-left: 1px solid #aaa;
+            border-top: 1px solid #aaa;
+
+            li {
+                border-bottom: 1px solid #aaa;
+                padding: 12px 20px;
+
+                a {
+                    color: #000 !important;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    font-size: 18px;
+                    margin: 0 8px;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $mainColor !important;
+                    }
+                }
+
+                span {
+                    background-color: #CA252B;
+                    color: #FFF;
+                    padding: 0 5px;
+                    margin-right: 10px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

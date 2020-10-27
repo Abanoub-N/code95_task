@@ -1,0 +1,243 @@
+/*!
+Theme Name: Code95_Task
+Theme URI: http://underscores.me/
+Author: abanoub nabil
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: code95_task
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Code95_Task is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+.main-posts .post-img {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.main-posts .grid {
+	display: grid;
+	grid-gap: 5px;
+	grid-template-rows: repeat(9, 45px);
+	grid-template-columns: repeat(10, 10%);
+}
+
+.main-posts .grid .main-post-item {
+	position: relative;
+}
+
+.main-posts .grid .main-post-item:first-child {
+	grid-row: 1 / 10;
+	grid-column: 1 / 7;
+}
+
+.main-posts .grid .main-post-item:nth-of-type(2) {
+	grid-row: 1 / 5;
+	grid-column: 7 / 10;
+}
+
+.main-posts .grid .main-post-item:nth-of-type(3) {
+	grid-row: 5 / 10;
+	grid-column: 7 / 10;
+}
+
+.main-posts .ads {
+	height: 300px;
+	width: 100%;
+}
+
+.egypt-news .post-img {
+	height: 300px;
+}
+
+.egypt-news .slick-dots li {
+	background-color: #000;
+	border-radius: 50%;
+}
+
+.egypt-news .slick-dots li.slick-active {
+	background-color: #CA252B;
+}
+
+.features h2 {
+	padding: 20px;
+}
+
+.features .post-img {
+	height: 300px;
+}
+
+.features .top-stories ul {
+	border-left: 1px solid #aaa;
+	border-top: 1px solid #aaa;
+}
+
+.features .top-stories ul li {
+	border-bottom: 1px solid #aaa;
+	padding: 12px 20px;
+}
+
+.features .top-stories ul li a {
+	color: #000 !important;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: 18px;
+	margin: 0 8px;
+	text-decoration: none;
+}
+
+.features .top-stories ul li a:hover {
+	color: #CA252B !important;
+}
+
+.features .top-stories ul li span {
+	background-color: #CA252B;
+	color: #FFF;
+	padding: 0 5px;
+	margin-right: 10px;
+	font-size: 20px;
+}
+
+@media all and (max-width: 767px) {
+	.main-posts .grid .main-post-item:first-child {
+		grid-row: 1 / 7;
+		grid-column: 1 / 10;
+	}
+
+	.main-posts .grid .main-post-item:nth-of-type(2) {
+		grid-row: 7 / 10;
+		grid-column: 1 / 6;
+	}
+
+	.main-posts .grid .main-post-item:nth-of-type(3) {
+		grid-row: 7 / 10;
+		grid-column: 6 / 10;
+	}
+
+	.post-title h4 {
+		font-size: 16px;
+	}
+}
+
+/* Header */
+navbar .navbar-nav {
+	flex-wrap: wrap !important;
+}
+
+navbar .ads {
+	height: 60px;
+	width: 70%;
+	margin: 0 auto;
+	background-color: #aaa;
+}
+
+navbar nav .nav-link {
+	color: #FFF !important;
+	font-family: serif;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: 18px;
+	margin: 0 8px;
+}
+
+navbar nav .nav-link:hover {
+	color: #CA252B !important;
+}
+
+navbar nav form {
+	position: relative;
+}
+
+navbar nav form label {
+	margin-bottom: 0 !important;
+}
+
+navbar nav form label input {
+	padding-right: 40px !important;
+	border: none;
+	padding: 7px 12px;
+	outline: none;
+}
+
+navbar nav form button {
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	color: #CA252B;
+	border: none;
+	background-color: transparent;
+}
+
+/* Main Style */
+body,
+html {
+	font-family: serif;
+	overflow-x: hidden;
+}
+
+.head {
+	color: #CA252B;
+	padding: 15px 0;
+	border-top: 3px solid #000;
+	font-family: serif;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.post-title a[href="http://localhost/task/category/local/"] {
+	background-color: #CA252B;
+	color: #FFF;
+	padding: 5px 15px;
+	border-radius: 5px;
+}
+
+.post-title a[href="http://localhost/task/category/local/"]:hover {
+	color: #CA252B;
+	background-color: #FFF;
+}
+
+.post-title a[href="http://localhost/task/category/world/"] {
+	background-color: #00f;
+	color: #FFF;
+	padding: 5px 15px;
+	border-radius: 5px;
+}
+
+.post-title a[href="http://localhost/task/category/world/"]:hover {
+	color: #00f;
+	background-color: #FFF;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+}
+
+.post-title {
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+}
+
+.post-title a {
+	color: #FFF;
+}
+
+.post-title a:hover {
+	color: #DDD !important;
+	text-decoration: none !important;
+}
+
+/*# sourceMappingURL=style.css.map */

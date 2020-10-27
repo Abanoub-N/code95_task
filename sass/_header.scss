@@ -1,0 +1,56 @@
+$mainColor: #CA252B;
+
+/* Header */
+
+navbar {
+    .navbar-nav {
+        flex-wrap: wrap !important;
+    }
+
+    .ads {
+        height: 60px;
+        width: 70%;
+        margin: 0 auto;
+        background-color: #aaa;
+    }
+
+    nav {
+        .nav-link {
+            color: #FFF !important;
+            font-family: serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 18px;
+            margin: 0 8px;
+
+            &:hover {
+                color: $mainColor !important;
+            }
+        }
+
+        form {
+            position: relative;
+
+            label {
+                margin-bottom: 0 !important;
+
+                input {
+                    padding-right: 40px !important;
+                    border: none;
+                    padding: 7px 12px;
+                    outline: none;
+                }
+            }
+
+
+            button {
+                position: absolute;
+                top: 7px;
+                right: 10px;
+                color: $mainColor;
+                border: none;
+                background-color: transparent;
+            }
+        }
+    }
+}

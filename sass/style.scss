@@ -1,0 +1,88 @@
+/*!
+Theme Name: Code95_Task
+Theme URI: http://underscores.me/
+Author: abanoub nabil
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: code95_task
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Code95_Task is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+@import './home';
+@import './media';
+@import './header';
+
+/* Main Style */
+$mainColor: #CA252B;
+
+body,
+html {
+	font-family: serif;
+	overflow-x: hidden;
+}
+
+.head {
+	color: $mainColor;
+	padding: 15px 0;
+	border-top: 3px solid #000;
+	font-family: serif;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.post-title {
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+
+	a {
+		color: #FFF;
+
+		&:hover {
+			color: #DDD !important;
+			text-decoration: none !important;
+		}
+	}
+
+	a[href="http://localhost/task/category/local/"] {
+		background-color: $mainColor;
+		color: #FFF;
+		padding: 5px 15px;
+		border-radius: 5px;
+
+		&:hover {
+			color: $mainColor;
+			background-color: #FFF;
+		}
+	}
+
+	a[href="http://localhost/task/category/world/"] {
+		background-color: #00f;
+		color: #FFF;
+		padding: 5px 15px;
+		border-radius: 5px;
+
+		&:hover {
+			color: #00f;
+			background-color: #FFF;
+		}
+	}
+}
+
+img {
+	height: 100%;
+	width: 100%;
+}

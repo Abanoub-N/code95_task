@@ -1,0 +1,36 @@
+.navbar-expand-sm .navbar-nav {
+	flex-wrap: wrap !important;
+}
+
+nav .nav-link {
+	color: #FFF !important;
+	font-family: serif;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+nav form {
+	position: relative;
+}
+
+nav form label {
+	margin-bottom: 0 !important;
+}
+
+nav form label input {
+	padding-right: 40px !important;
+	border: none;
+	padding: 7px 12px;
+	outline: none;
+}
+
+nav form button {
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	color: #CA252B;
+	border: none;
+	background-color: transparent;
+}
+
+/*# sourceMappingURL=header.css.map */
